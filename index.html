@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不動産見積もりシミュレーター</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+            background-color: #f5f6f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #008c99;
+            margin-bottom: 30px;
+        }
+        .step {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .step h2 {
+            font-size: 1.2rem;
+            color: #008c99;
+            border-left: 4px solid #008c99;
+            padding-left: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .result-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #e6f6f7;
+            border: 1px solid #008c99;
+            border-radius: 8px;
+        }
+        .result-section h3 {
+            font-size: 1.5rem;
+            color: #008c99;
+            margin-top: 0;
+        }
+        .total-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e94b3c;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>不動産見積もりシミュレーター</h1>
+    <p style="text-align: center; color: #666;">不動産取引にかかる概算費用を計算します。</p>
+
+    <div class="step">
+        <h2>物件情報</h2>
+        <div class="form-group">
+            <label for="price">物件価格 (万円)</label>
+            <input type="number" id="price" placeholder="例: 3000" min="0">
+        </div>
+        <div class="form-group">
+            <label for="building-age">築年数 (年)</label>
+            <input type="number" id="building-age" placeholder="例: 5" min="0">
+        </div>
+    </div>
+
+    <div class="step">
+        <h2>諸費用</h2>
+        <div class="form-group">
+            <label for="loan-amount">住宅ローン借入額 (万円)</label>
+            <input type="number" id="loan-amount" placeholder="例: 2500" min="0">
+        </div>
+        <div class="form-group">
+            <label for="other-fees">その他費用 (万円)</label>
+            <input type="number" id="other-fees" placeholder="例: 50" min="0">
+        </div>
+    </div>
+
+    <div class="result-section">
+        <h3>概算見積もり総額 (目安)</h3>
+        <p class="total-amount" id="total-result">0万円</p>
+        <p style="font-size: 0.9rem; color: #666;">※ この金額は概算であり、実際の費用とは異なる場合があります。</p>
+    </div>
+
+</div>
+
+</body>
+</html>
